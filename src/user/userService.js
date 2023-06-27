@@ -10,7 +10,7 @@ module.exports.getUser = (userDetails) => {
       .findOne({ email: userDetails.email })
       .then((result) => {
         if (result != null && result != undefined) {
-          console.log("im in hell");
+          
           resolve({ status: true, msg: "user found successfully" });
         } else {
           reject({ status: false, msg: "Invalid user" });
